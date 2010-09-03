@@ -1,0 +1,13 @@
+<div id="search_field"><%= render 'shared/search' %></div>
+<div class="access_button">
+	<table id="access_button_table"><tbody>
+		<tr>
+			<td><div><%= link_to 'BOUTIQUE', nil, :id => 'shop', :class => 'access_button_link' %></div></td>
+			<td><div><%= link_to 'WORKSTATION', nil, :id => 'workstation', :class => 'access_button_link' %></div></td>
+		</tr>
+	</tbody></table>
+</div>
+<%= render 'shared/login_bar' %>
+<% if store_menu? %>
+  <%= render 'shared/store_menu' %>
+<% end %>

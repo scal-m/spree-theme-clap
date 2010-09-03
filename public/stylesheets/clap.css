@@ -1,0 +1,175 @@
+@font-face {
+	font-family: AvenirLTStd-Light;
+	src: url('/fonts/AvenirLTStd-Light.otf') format("truetype");
+}
+
+body {
+	background: #FFF;
+}
+
+.container {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#header {
+	background: transparent url(/images/header_trame_fond.png);
+	background-repeat: repeat-x;
+} 
+
+div#nav-bar div#search_field {
+	position: absolute;
+	left: 0;
+	right: 340px;
+}
+
+div#nav-bar select#taxon {
+	display: none;
+}
+
+div#login-bar {
+	width: auto;
+	height: 100%;
+	margin: 0 0;
+	padding: 0 0;
+	position: absolute;
+	left: 274px;
+	right: 0px;
+}
+
+div#nav-bar div#search_field form table {
+	border-bottom:1px solid #E7E7E7;
+}
+
+div#nav-bar div#search_field form table td#submit_search {
+	width: 30px;
+}
+
+div#nav-bar form input#keywords {
+	-webkit-appearance: textfield;
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	-moz-box-sizing:content-box;
+	text-align: -webkit-auto;
+	border: 1px #CCC;
+	background:none repeat scroll 0 0 #FFFFFF;
+	color:#968777;
+	float:left;
+	font:16px arial,sans-serif;
+	vertical-align:top;
+	width:100%;
+	border-color:#CCCCCC #CCCCCC -moz-use-text-color;
+	border-style:solid solid none;
+	border-width:1px 1px medium;
+	height:25px;
+	padding:4px 0 0 6px;
+}
+
+div#nav-bar form input[type="submit"] {
+	border: none;
+	background: transparent url('/images/header_loupe.png') no-repeat top left;
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	cursor: pointer;
+}
+
+div#nav-bar {
+  width: auto;
+  margin-top: 30px;
+}
+
+div#nav-bar table td {
+	padding: 0;	
+}
+
+div#nav-bar div.access_button table#access_button_table {
+  width: 240px;
+  float: right;
+}
+
+div#nav-bar div.access_button div {
+	margin: 0;
+	padding: 0;
+  width: 170px;
+	height: 30px;  
+}
+
+div#nav-bar div.access_button div a.access_button_link {
+	display: block;
+	background: transparent url('/images/header_btn_off.png') no-repeat top left;
+  text-align: center;
+  line-height: 32px;
+	text-decoration: none;
+	color: #EFC051;
+  font-family: "AvenirLTStd-Light", helvetica, sans-serif;
+	letter-spacing: 0.3em;
+	text-indent: 0.3em;	
+}
+
+div#nav-bar div.access_button div a.access_button_link:hover {
+	background: transparent url('/images/header_btn_on.png') no-repeat top left;	
+	color: #1E1E23;
+}
+
+div#nav-bar ul.login_bar {
+	list-style-type: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 5px 5px;
+}
+
+div#nav-bar ul.login_bar li {
+	float: left;
+	margin-left: 5px;
+}
+
+div#nav-bar div.cart-indicator a, div#nav-bar ul.login_bar li a {
+	text-decoration: none;
+	color: #968777;
+	font-size: 10px;
+	font-family: "AvenirLTStd-Light", helvetica, sans-serif;
+	letter-spacing: 0.2em;
+}
+
+div#nav-bar div.cart-indicator {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 5px 5px;
+}
+
+div#nav-bar div.cart-indicator a {
+  padding-right: 40px;
+  background: transparent url(/images/header_picto_panier.png) center right no-repeat;
+  display: block;
+  margin-bottom:1px;
+	padding-right:18px;
+	padding-top:5px;
+}
+
+div#nav-bar div.cart-indicator a.full { 
+	background-image: url(/images/header_picto_panier.png); 
+}
+
+body.two-col #wrapper {
+	background: #FFF;
+}
+
+#wrapper {
+	background: #FFF;
+	padding: 0;
+}
+	
+#wrapper #shadow {
+	background: transparent url(/images/header_ombre.png);
+	background-repeat: repeat-x;
+	width: 100%;
+	height: 13px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
