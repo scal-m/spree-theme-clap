@@ -1,0 +1,14 @@
+<div class="horizontalaccordion">
+<ul id="taxonomies" class="sidebar-item">
+<% get_taxonomies.each do |taxonomy| %>
+  <li<%= ' id="current"' if @taxon && ([@taxon] + @taxon.ancestors).include?(taxonomy.root) %> class="navigation-list">
+	  <h3<%= ' class="current"' if @taxon && @taxon == taxonomy.root %>><%= t("shop_by_taxonomy", :taxonomy => taxonomy.name.singularize) %></h3>
+	  <div><ul>
+	  <% taxonomy.root.children.each do |taxon| %>
+	    <li<%= ' class="current"' if @taxon and ([@taxon] + @taxon.ancestors).include?(taxon) %>><%= link_to taxon.name, seo_url(taxon) %></li>
+	  <% end %>
+	  </ul></div>
+	</li>
+<% end %>
+</ul>
+</div>

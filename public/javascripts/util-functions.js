@@ -13,6 +13,19 @@ function addEvent(element, eventType, lamdaFunction, useCapture) {
     }
 }
 
+function removeEvent(element, eventType, lamdaFunction, useCature) {
+	if(element.removeEventListener) {
+		element.removeEventListener(eventType, lamdaFunction, useCapture);
+		return true;
+	} else if(element.detachEvent) {
+		var r = element.detachEvent('on' + eventType, lamdaFunction);
+		return r;
+	} else {
+		return false;
+	}
+			
+}
+
 /* 
  * Kills an event's propagation and default action
  */

@@ -5,7 +5,7 @@
         options_for_select([[t(:all_departments), '']] + 
                               @taxons.map {|t| [t.name, t.id]}, 
                             @taxon ? @taxon.id : params[:taxon]) %></td>
-  	<td><%= text_field_tag :keywords, 'Effectuez votre recherche...', :class => 'cleardefault' %></td>
+  	<td><%= text_field_tag :keywords, t('do_research'), :class => 'cleardefault' %></td>
   	<td id="submit_search"><%= submit_tag '', :name => nil %></td>
   </tr></tbody></table>
 <% end %>
