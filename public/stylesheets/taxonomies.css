@@ -1,0 +1,95 @@
+#sidebar {
+	border: none;
+	width: auto;
+	margin: 0;
+	padding: 0;
+	background: #968777;
+}
+
+.horizontalaccordion ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	height: 300px;
+	width: 180px;
+	overflow: hidden;
+}
+
+.horizontalaccordion ul li.navigation-list {
+	dispay: block;
+	overflow: hidden;
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 40px;
+	height: 300px;
+	
+	background: #f0f0f0;
+	
+//	transition: width 0.2s ease-in-out;
+//	-moz-transition: width 0.2s ease-in-out;
+//	-webkit-transition: width 0.2s ease-in-out;
+//	-o-transition: width 0.2s ease-in-out;
+}
+
+.horizontalaccordion ul li.navigation-list h3 {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 10px;
+	height: 19px;
+	width: 280px;
+	
+	border-left: #f0f0f0 1px solid;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #000;
+	background: #cccccc;
+	
+	white-space: nowrap;
+	-moz-transform: rotate(90.0deg) translate(-40px, 0px);
+	-moz-transform-origin: 0 100%;
+	-o-transform: rotate(90.0deg) translate(-40px, 0px);
+	-o-transform-origin: 0 100%;
+	-webkit-transform: rotate(90.0deg) translate(-40px, 0px);
+	-webkit-transform-origin: 0 100%;
+	transform: rotate(90.0deg) translate(-40px, 0px);
+	transform-origin: 0 100%;
+	filter: prodig:DXImageTransform.Microsoft.BasicImage(rotation=1.0);
+	-ms-filter: "prodig:DXImageTransform.Microsoft.BasicImage(rotation=1.0)";
+}
+
+.horizontalaccordion ul li.navigation-list div {
+	display: none;
+	float: left;
+	overflow: auto;
+	position: relative;
+	top: -40px;
+	left: 40px;
+	*top: 0px;
+	*left: 0px;
+	margin: 0;
+	width: 100px;
+	height: 280px;
+	padding: 10px;
+}
+
+.horizontalaccordion ul li.navigation-list:hover {
+	overflow: hidden;
+	width: 140px;
+}
+
+.horizontalaccordion:hover ul li.navigation-list:hover div {
+	display: block;
+}
+
+.horizontalaccordion:hover ul li.navigation-list:hover h3 {
+	color: #fff;
+	background: #000;
+}
+
+.horizontalaccordion ul li.navigation-list h3:hover {
+	cursor: pointer;
+}
