@@ -37,7 +37,17 @@ end
     <% end %>
 
     <div id="content">
+    
+    	<% if @taxon %>
+    		<%= breadcrumbs(@taxon) %>
+    	<% else %>
+				<% if @content_for_sidebar %>
+					<div class='breadcrumbs'></div>
+				<% end %>
+    	<% end %>
+    	<!-- 
       <%= breadcrumbs(@taxon) if @taxon %>
+      -->
       <% if flash[:notice] %>
       <div class="flash notice"><%= flash[:notice] %></div>
       <% end %>
