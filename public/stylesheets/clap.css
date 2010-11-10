@@ -181,7 +181,7 @@ body.two-col #wrapper {
 body.two-col #content {
 	width: 60%;
 	overflow: auto;
-	padding-left: 250px;
+	padding-left: 220px;
 }
 
 .product-listing {
@@ -224,6 +224,17 @@ button.large.primary {
 	display: none;
 }
 
+#wrapper #shadow_bottom {
+	background: transparent url(/images/header_ombre_bas.png);
+	background-repeat: repeat-x;
+	width: 100%;
+	height: 13px;
+	position: fixed;
+	left: 0;
+	bottom: 30px;
+	z-index: 997;
+}
+
 #footer {
 	background-color: #1E1E23;
 	bottom: 0px;
@@ -232,5 +243,6 @@ button.large.primary {
 	width: 100%;
 	z-index: 998;
 	height: 30px;
-	padding-top: 10px;
+	line-height:30px;
+	padding: 0;
 }

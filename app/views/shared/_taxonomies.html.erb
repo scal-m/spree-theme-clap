@@ -1,7 +1,7 @@
 <div id="taxonomies" class="sidebar-item">
 <% get_taxonomies.each do |taxonomy| %>
 	  <h3<%= ' class="current"' if @taxon && ([@taxon] + @taxon.ancestors).include?(taxonomy.root) %>><%= t("shop_by_taxonomy", :taxonomy => taxonomy.name.singularize) %></h3>
-	  <div<%= ' style="display: block; width:150px;"' if @taxon && ([@taxon] + @taxon.ancestors).include?(taxonomy.root) %>>
+	  <div<%= ' style="display: block; width:180px;"' if @taxon && ([@taxon] + @taxon.ancestors).include?(taxonomy.root) %>>
 		  <ul>
 		  <% taxonomy.root.children.each do |taxon| %>
 		    <li<%= ' class="current_child"' if @taxon and ([@taxon] + @taxon.ancestors).include?(taxon) %>><%= link_to taxon.name, seo_url(taxon) %></li>
