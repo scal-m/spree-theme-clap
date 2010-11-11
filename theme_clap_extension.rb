@@ -19,8 +19,7 @@ class ThemeClapExtension < Spree::Extension
     #   helper YourHelper
     # end
     
-#    AppConfiguration.class_eval do
-#    	preference :logo, :string, :default => 'header_partie_gauche.png'
-#    end    
+ 		Spree::Config.set(:site_name => 'Classical Playback')
+   
   end
 end
