@@ -84,7 +84,7 @@ div#taxonomies h3.current, div#taxonomies h3.current:hover {
 }
 
 div#taxonomies h3:hover {
-	color: ##1E1E23;
+	color: #1E1E23;
 	background: transparent url(/images/accordeon_hover.gif);
 	background-repeat: repeat-x;
 }
