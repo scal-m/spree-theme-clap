@@ -199,14 +199,23 @@ body.two-col #content {
 .product-listing li a {
 	float: left;
 	position: relative;
+	height: 70px;
+	width: 70px;
 }	
 
 .product-listing li div.info {
 	float: left;
 	position: relative;
-	height: 100px;	
+	height: 70px;	
 	text-align: left;
 	padding: 0;
+	background: transparent url(/images/touche_out.jpg) left top;
+	background-repeat: no-repeat; 
+}
+
+.product-listing li:hover div.info {
+	background: transparent url(/images/touche_over.jpg) left top;
+	background-repeat: no-repeat;
 }
 
 .product-listing li div.info span {

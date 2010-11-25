@@ -18,8 +18,8 @@ class ThemeClapExtension < Spree::Extension
     # Spree::BaseController.class_eval do
     #   helper YourHelper
     # end
-    
- 		Spree::Config.set(:site_name => 'Classical Playback')
-   
+    if Spree::Config.instance
+ 			Spree::Config.set(:site_name => 'Classical Playback')
+   	end
   end
 end

@@ -102,7 +102,8 @@ div#taxonomies div {
 	width: 180px;
 	height: 100%;
 	padding: 0px;
-	background-color: #FFF;
+	background: transparent url(/images/fond_accordeon.jpg);
+	background-repeat: repeat-y;
 }
 
 div#taxonomies div ul {

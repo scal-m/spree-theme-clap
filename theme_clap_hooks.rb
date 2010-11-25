@@ -40,8 +40,9 @@ class ThemeClapHooks < Spree::ThemeSupport::HookListener
   #   end
   #
 	
-	insert_after :inside_head, "shared/scripts"
+	
 	insert_after :inside_head, "shared/styles"
+	insert_after :inside_head, "shared/scripts"
 	#insert_before :homepage_products, :text => "<h1>Welcome!</h1>"
 	#remove :sidebar;
 	#remove :homepage_products;

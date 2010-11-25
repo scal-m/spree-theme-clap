@@ -3,7 +3,7 @@ jQuery(document).ready(function() {
 		$('#taxonomies').tabs('#taxonomies div', {tabs: 'h3', effect: 'horizontal'});
 	}
 	if($('.info')) {
-		resizeFloatingElementWidth($('.info'), $('#content'), 100 + 18);
+		resizeFloatingElementWidth($('.info'), $('#content'), 120);
 	}
 //	if($('#content')) {
 //		resizeFloatingElementHeight($('#content'), $(window), $('#header').height() + $('#footer').height());
@@ -20,7 +20,7 @@ jQuery(document).ready(function() {
 // without timer for more fluidity
 $(window).resize(function() {
 	if($('.info')) {
-		resizeFloatingElementWidth($('.info'), $('#content'), 100 + 18);
+		resizeFloatingElementWidth($('.info'), $('#content'), 120);
 	}
 });
 
