@@ -1,9 +1,11 @@
 <div id="taxonomies" class="sidebar-item">
 <% get_taxonomies.each do |taxonomy| %>
-	  <h3<%= ' class="current"' if @taxon && ([@taxon] + @taxon.ancestors).include?(taxonomy.root) %>><%= t("shop_by_taxonomy", :taxonomy => taxonomy.name.singularize) %></h3>
-	  <div<%= ' style="display: block; width:180px;"' if @taxon && ([@taxon] + @taxon.ancestors).include?(taxonomy.root) %>>
+	  <h3<%= ' class="current"' if (@taxon && ([@taxon] + @taxon.ancestors).include?(taxonomy.root)) || (!@taxon && taxonomy.name == "Instruments") %>><%= t("shop_by_taxonomy", :taxonomy => taxonomy.name.singularize) %></h3>
+	  <!--<div<%= if @taxon && ([@taxon] + @taxon.ancestors).include?(taxonomy.root); ' style="width:180px; display: block;"'; elsif @taxon && !([@taxon] + @taxon.ancestors).include?(taxonomy.root); ' style="display: none;"'; elsif !@taxon && taxonomy.name == "Instruments"; ' style="width:180px; display: block;"'; else; ' style="display: none;"'; end %>>-->
+		  <div>
 		  <ul>
-		  <% taxonomy.root.children.each do |taxon| %>
+		  <% taxonomy_root_children = taxonomy.root.children.sort %>
+		  <% taxonomy_root_children.each do |taxon| %>
 		    <li<%= ' class="current_child"' if @taxon and ([@taxon] + @taxon.ancestors).include?(taxon) %>><%= link_to taxon.name, seo_url(taxon) %></li>
 		  <% end %>
 		  </ul>

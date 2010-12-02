@@ -1,6 +1,16 @@
 jQuery(document).ready(function() {
-	if($('#taxonomies')) {
-		$('#taxonomies').tabs('#taxonomies div', {tabs: 'h3', effect: 'horizontal'});
+	//alert("dom is OK");
+	if(document.getElementById('taxonomies')) {
+		var child = document.getElementById('taxonomies').childNodes[1];
+		//alert("className : " + child.nodeName);
+		if(child.className == 'current') {
+			$('#taxonomies').tabs('#taxonomies div', {tabs: 'h3', effect: 'horizontal', initialIndex: 0});
+		} else {
+			$('#taxonomies').tabs('#taxonomies div', {tabs: 'h3', effect: 'horizontal', initialIndex: 1});
+		}
+//		var api = $('#taxonomies').tabs('#taxonomies div');
+//		api.next();
+//		done.call();
 	}
 	if($('.info')) {
 		resizeFloatingElementWidth($('.info'), $('#content'), 120);
