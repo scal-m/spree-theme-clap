@@ -1,20 +1,16 @@
 jQuery(document).ready(function() {
-	//alert("dom is OK");
 	if(document.getElementById('taxonomies')) {
 		var child = document.getElementById('taxonomies').childNodes[1];
-		//alert("className : " + child.nodeName);
 		if(child.className == 'current') {
 			$('#taxonomies').tabs('#taxonomies div', {tabs: 'h3', effect: 'horizontal', initialIndex: 0});
 		} else {
 			$('#taxonomies').tabs('#taxonomies div', {tabs: 'h3', effect: 'horizontal', initialIndex: 1});
 		}
-//		var api = $('#taxonomies').tabs('#taxonomies div');
-//		api.next();
-//		done.call();
 	}
-	if($('.info')) {
-		resizeFloatingElementWidth($('.info'), $('#content'), 120);
+	if($('.info')) {		
+		resizeFloatingElementWidth($('.info'), $('#content'), 70);
 	}
+	
 //	if($('#content')) {
 //		resizeFloatingElementHeight($('#content'), $(window), $('#header').height() + $('#footer').height());
 //	}
@@ -30,7 +26,7 @@ jQuery(document).ready(function() {
 // without timer for more fluidity
 $(window).resize(function() {
 	if($('.info')) {
-		resizeFloatingElementWidth($('.info'), $('#content'), 120);
+		resizeFloatingElementWidth($('.info'), $('#content'), 70);
 	}
 });
 

@@ -4,33 +4,39 @@
 %>
 <% if products.empty? %>
   <%= t(:no_products_found) %>
-<% elsif params.key?(:keywords) %>
-  <h3><%= t(:search_results, :keywords => h(params[:keywords])) %></h3>
 <% end %>
  
 <% if products.any? %>
 <ul class="product-listing">
   <% products.each do |product| %>
     <% if Spree::Config[:show_zero_stock_products] || product.has_stock? %>
-      <li id="product_<%= product.id %>">
+    	<% unless product.product_properties.empty? %>
+				<% for product_property in product.product_properties %>
+					<% if product_property.property.name == "instrument" %>
+				  	<li class="product" id="product_<%= product.id %>" onMouseOver="this.getElementsByTagName('img')[0].src = '/images/products/<%= product_property.value %>_on.jpg'" onMouseOut="this.getElementsByTagName('img')[0].src = '/images/products/<%= product_property.value %>_off.jpg'">
+				  <% end %>
+				<% end %>
+			<% end %>
         <%= link_to small_image(product), product %>
         <!-- 
         <%= link_to product.name + "<span class='price selling'>#{product_price(product)}</span>", product, :class => 'info' %>
         -->
         <div class='info'>
-        	<%= product.name %>
         	<% unless product.product_properties.empty? %>
 						<% for product_property in product.product_properties %>
-						  <span><%= product_property.value %></span>
+							<% if product_property.property.name == "compositeur" %>
+						  	<span class="compo"><%= product_property.value %></span>
+						  <% end %>
 						<% end %>
 					<% end %>
+					<span class="name"><%= product.name %></span> 
         	<%= "<span class='price selling'>#{product_price(product)}</span>" %>
         	<% form_for :order, :url => orders_url do |f| %>
         		<% if product.has_stock? || Spree::Config[:allow_backorders] %>
         			<%= hidden_field_tag (product.has_variants? ? :quantity : "variants[#{product.master.id}]"), '1', :class => "title" %>
 					    &nbsp;
-					    <button type='submit' class='large primary'>
-					      <%= image_tag('/images/add-to-cart.png') %>
+					    <button type='submit' class='large primary cart'>
+					      <%= image_tag('/images/panier_vignette.png') %>
 					    </button>
 					  <% else %>
 					    <%= content_tag('strong', t('out_of_stock')) %>

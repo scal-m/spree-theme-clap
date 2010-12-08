@@ -1,7 +1,6 @@
 <div id="taxonomies" class="sidebar-item">
-<% get_taxonomies.each do |taxonomy| %>
-	  <h3<%= ' class="current"' if (@taxon && ([@taxon] + @taxon.ancestors).include?(taxonomy.root)) || (!@taxon && taxonomy.name == "Instruments") %>><%= t("shop_by_taxonomy", :taxonomy => taxonomy.name.singularize) %></h3>
-	  <!--<div<%= if @taxon && ([@taxon] + @taxon.ancestors).include?(taxonomy.root); ' style="width:180px; display: block;"'; elsif @taxon && !([@taxon] + @taxon.ancestors).include?(taxonomy.root); ' style="display: none;"'; elsif !@taxon && taxonomy.name == "Instruments"; ' style="width:180px; display: block;"'; else; ' style="display: none;"'; end %>>-->
+<% get_taxonomies.reverse.each do |taxonomy| %>
+	  <h3<%= ' class="current"' if (@taxon && ([@taxon] + @taxon.ancestors).include?(taxonomy.root)) || (!@taxon && taxonomy.name == "Compositeurs") %>><%= taxonomy.name %></h3>
 		  <div>
 		  <ul>
 		  <% taxonomy_root_children = taxonomy.root.children.sort %>

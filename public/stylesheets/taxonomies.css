@@ -59,7 +59,7 @@ div#taxonomies h3 {
 	background: transparent url(/images/accordeon_bg.gif);
 	background-repeat: repeat-x;
 	line-height: 20px;
-	text-indent: 20px;
+	text-indent: 40px;
 	
 	white-space: nowrap;
 	-moz-transform: rotate(90.0deg) translate(-20px, 0px);
@@ -129,6 +129,14 @@ div#taxonomies div ul li a {
 	color: #1E1E23;
 	font-size: 12px;
 	display: block;
+}
+
+div#taxonomies div ul li.current_child {
+	background-color: #FFFFFF;
+}
+
+div#taxonomies div ul li.current_child:hover {
+	background-color: #1E1E27;
 }
 
 

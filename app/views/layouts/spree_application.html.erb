@@ -39,15 +39,15 @@ end
     <div id="content">
     
     	<% if @taxon %>
-    		<%= breadcrumbs(@taxon) %>
-    	<% else %>
-				<% if @content_for_sidebar %>
-					<div class='breadcrumbs'></div>
-				<% end %>
+    		<%= breadcrumbs(@taxon, "&nbsp;&gt;&nbsp;") %>
+    	<% elsif @content_for_sidebar %>
+				<% if params[:keywords] %>
+    			<div class='breadcrumbs' id='search_result'><%= t(:search_results, :keywords => h(params[:keywords])) %></div>
+    		<% else %>
+    			<div class='breadcrumbs' id='search_result'><%= t(:all_products) %></div>
+    		<% end %>
     	<% end %>
-    	<!-- 
-      <%= breadcrumbs(@taxon) if @taxon %>
-      -->
+    	
       <% if flash[:notice] %>
       <div class="flash notice"><%= flash[:notice] %></div>
       <% end %>

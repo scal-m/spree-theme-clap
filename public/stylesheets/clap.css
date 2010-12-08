@@ -125,7 +125,7 @@ div#nav-bar ul.login_bar {
 
 div#nav-bar ul.login_bar li {
 	float: left;
-	margin-left: 5px;
+	margin-left: 8px;
 }
 
 div#nav-bar div.cart-indicator a, div#nav-bar ul.login_bar li a {
@@ -184,6 +184,32 @@ body.two-col #content {
 	padding-left: 220px;
 }
 
+.breadcrumbs {
+	margin-bottom: 0px;
+	background: transparent url(/images/accordeon_bg.gif);
+	background-repeat: repeat-x;
+	height: 20px;
+	line-height: 20px;
+//	left: 220px;
+//	position: fixed;
+//	top: 89px;
+//	width: 700px;
+//	z-index: 993;
+}
+
+.breadcrumbs ul li a {
+	color: #FFFFFF;
+}
+
+.breadcrumbs ul li {
+	color: #FFFFFF;
+}
+
+#search_result {
+	color: #FFFFFF;
+	padding-left: 10px;	
+}
+
 .product-listing {
 	margin: 0;
 }
@@ -220,8 +246,41 @@ body.two-col #content {
 
 .product-listing li div.info span {
 	display: inline;
-	float: right;
+	padding: 0px 10px;
 }
+
+.product-listing li div.info span.compo {
+	font-weight: bold;
+	font-size: 14px;
+	padding: 8px 0px 0px 10px;
+	height: 16px;
+	display: block;
+}
+
+.product-listing li div.info span.name {
+	font-size: 13px;
+	display: block;
+	padding: 8px 100px 0px 40px;
+	color: #968777;
+	line-height: 15px;
+}
+
+.product-listing li div.info span.price {
+	position: absolute;
+	top: 26px;
+	right: 40px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #E03F00;
+}
+
+.product-listing li div.info form {
+	display: inline;
+	position: absolute;
+	right: 0px;
+	top: 16px;
+}
+
 
 button.large.primary {
 	  background-image: none !important;
