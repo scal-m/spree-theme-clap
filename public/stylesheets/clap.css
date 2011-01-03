@@ -77,6 +77,10 @@ div#nav-bar form input[type="submit"] {
 	cursor: pointer;
 }
 
+div#nav-bar form input[type="submit"]:hover {
+	background: transparent url('/images/header_loupe_on.png') no-repeat top left;
+}
+
 div#nav-bar {
   width: auto;
   margin-top: 30px;
@@ -163,8 +167,7 @@ body.two-col #wrapper {
 #wrapper {
 	background: #FFF;
 	padding: 0;
-	padding-top: 89px;
-
+	padding-top: 109px;
 }
 	
 #wrapper #shadow {
@@ -190,11 +193,11 @@ body.two-col #content {
 	background-repeat: repeat-x;
 	height: 20px;
 	line-height: 20px;
-//	left: 220px;
-//	position: fixed;
-//	top: 89px;
-//	width: 700px;
-//	z-index: 993;
+	left: 220px;
+	position: fixed;
+	top: 89px;
+	right:162px;
+	z-index: 993;
 }
 
 .breadcrumbs ul li a {
@@ -244,6 +247,14 @@ body.two-col #content {
 	background-repeat: no-repeat;
 }
 
+.product-listing li div.info button.play_sample {
+	background-image: none !important;
+  background-color: transparent !important;
+  border: none;
+  float: left;
+  padding-top: 24px;
+} 
+
 .product-listing li div.info span {
 	display: inline;
 	padding: 0px 10px;
@@ -252,7 +263,7 @@ body.two-col #content {
 .product-listing li div.info span.compo {
 	font-weight: bold;
 	font-size: 14px;
-	padding: 8px 0px 0px 10px;
+	padding: 8px 0px 0px 50px;
 	height: 16px;
 	display: block;
 }
@@ -260,7 +271,7 @@ body.two-col #content {
 .product-listing li div.info span.name {
 	font-size: 13px;
 	display: block;
-	padding: 8px 100px 0px 40px;
+	padding: 8px 115px 0px 70px;
 	color: #968777;
 	line-height: 15px;
 }
@@ -278,9 +289,25 @@ body.two-col #content {
 	display: inline;
 	position: absolute;
 	right: 0px;
-	top: 16px;
+	top: 9px;
 }
 
+hr.space {
+	margin: 0px 0px 14px;
+}
+
+.pagination {
+	line-height: 0;
+	position: fixed;
+	right: 168px;
+	top: 89px;
+	z-index: 1000;
+	color: #000000;
+}
+
+.pagination a {
+	color: #FFFFFF;
+}
 
 button.large.primary {
 	  background-image: none !important;
@@ -290,6 +317,17 @@ button.large.primary {
 
 .flash {
 	display: none;
+}
+
+#wrapper #partenaires {
+	width: 150px;
+	background: transparent url(/images/fond_partenaires.png) left top;
+	background-repeat: repeat-y;
+	position: fixed;
+	top: 89px;
+	right: 0px;
+	bottom: 30px;
+	margin-right: 12px;
 }
 
 #wrapper #shadow_bottom {

@@ -20,6 +20,9 @@ class ThemeClapExtension < Spree::Extension
     # end
     if Spree::Config.instance
  			Spree::Config.set(:site_name => 'Classical Playback')
+ 			Spree::Config.set(:site_url => 'www.classicalplayback.com')
+ 			Spree::Config.set(:products_per_page => 40)
+ 			Spree::Config.set(:allow_openid => false)
    	end
   end
 end
